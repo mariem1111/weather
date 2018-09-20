@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-pop-up',
@@ -14,8 +15,6 @@ export class PopUpComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+      this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
   }
-
-
 }
