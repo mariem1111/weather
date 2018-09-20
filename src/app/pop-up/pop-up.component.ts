@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-pop-up',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pop-up.component.css']
 })
 export class PopUpComponent implements OnInit {
-
-  constructor() { }
+  closeResult: string;
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+  }
+
 
 }
