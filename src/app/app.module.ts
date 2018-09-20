@@ -7,6 +7,10 @@ import { RegisterComponent } from './register/register.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import {ApiWeatherService} from './api-weather.service';
+import { HttpModule } from '@angular/http';
+
+
 
 @NgModule({
   declarations: [
@@ -18,9 +22,11 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
+
   ],
-  providers: [],
+  providers: [ApiWeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
