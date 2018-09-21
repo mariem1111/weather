@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiWeatherService } from '../Api-weather.service';
-
 
 @Component({
   selector: 'app-dashboard',
@@ -9,29 +7,9 @@ import { ApiWeatherService } from '../Api-weather.service';
 })
 export class DashboardComponent implements OnInit {
 
-  location = {
-    city: 'france',
-    code: 'fr'
-  };
-  weather: any;
-  value;
-  constructor(private apiweatherService: ApiWeatherService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.value = localStorage.getItem('location');
-
-    if (this.value != null) {
-        this.location = JSON.parse(this.value);
   }
-
-
-    this.apiweatherService.getWeather(this.location.city, this.location.code).subscribe(
-      response => {
-        console.log(response);
-        this.weather = response;
-      }
-    );
-  }
-
 
 }
