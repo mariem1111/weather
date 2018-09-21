@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-pop-up',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopUpComponent implements OnInit {
 
-  constructor() { }
+
+  city: string;
+  code: string;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  saveForm() {
+
+    const location = {
+      city: this.city,
+      code : this.code
+    };
+
+    localStorage.setItem('location', JSON.stringify(location));
+    this.router.navigate(['dashboard']);
   }
 
 }

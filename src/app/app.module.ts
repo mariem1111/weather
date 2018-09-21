@@ -9,6 +9,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import {ApiWeatherService} from './api-weather.service';
 import { HttpModule } from '@angular/http';
+import {FormsModule} from '@angular/forms';
+
 
 
 
@@ -23,7 +25,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
 
   ],
   providers: [ApiWeatherService],

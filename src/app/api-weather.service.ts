@@ -17,7 +17,7 @@ export class ApiWeatherService {
   url ;
 
   constructor(private http: Http) {
-    this.url = 'https://cors.io/?https://samples.openweathermap.org/data/2.5/weather?q=';
+    this.url = 'http://api.openweathermap.org/data/2.5/weather?q=';
 
 
   }
