@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
+=======
 >>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
  import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
  import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -14,11 +17,17 @@
    styleUrls: ['./pop-up.component.css']
  })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
 =======
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 >>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
+<<<<<<< HEAD
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
+=======
 >>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
 
 
@@ -29,14 +38,20 @@ import {Router} from '@angular/router';
   title = 'app works!';
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   title = 'app works!';
 =======
+=======
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
 
   city: string;
   code: string;
 
   constructor(private router: Router) { }
 >>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
+<<<<<<< HEAD
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
+=======
 >>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
 
    constructor(private modalService: NgbModal) { }
@@ -45,8 +60,11 @@ import {Router} from '@angular/router';
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
+=======
 >>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
    ngOnInit() {
      this.openModal.nativeElement.click();
@@ -60,7 +78,10 @@ import {Router} from '@angular/router';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
 =======
 
   saveForm() {
@@ -76,4 +97,7 @@ import {Router} from '@angular/router';
 
 }
 >>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
+<<<<<<< HEAD
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
+=======
 >>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
