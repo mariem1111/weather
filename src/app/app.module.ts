@@ -21,15 +21,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-
-
-
-
-
-
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +31,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     BrowserAnimationsModule,
     CustomMaterialModule,
     FormsModule,
@@ -52,11 +42,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MatCardModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
-=======
+    MatSelectModule,
     AppRoutingModule,
-    NgbModule,
->>>>>>> 06115183019ac2f6071c1ea1161d312261998f42
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
