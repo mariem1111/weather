@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="popup" class="modal" >
   <ng-template  #content let-modal>
 
@@ -47,3 +48,25 @@
   </div>
 </div-->
 <!--button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#login-modal"></button-->
+=======
+<div class="container">
+
+  <h1 class="text-center primary "> Enter City and code </h1>
+
+
+  <form >
+    <div class="form-group">
+      <label > city</label>
+      <input type="text"  class="form-control"  name="city" [(ngModel)]="city">
+
+      <label > Code</label>
+      <input type="text"  class="form-control" name="code" [(ngModel)]="code"   >
+    </div>
+
+    <button class="btn btn-success" (click)="saveForm()">Search</button>
+
+
+  </form>
+
+</div>
+>>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
