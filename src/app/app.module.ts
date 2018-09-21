@@ -28,16 +28,19 @@ import {MatSelectModule} from '@angular/material/select';
 
 
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     PopUpComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
+<<<<<<< HEAD
     BrowserAnimationsModule,
     CustomMaterialModule,
     FormsModule,
@@ -50,6 +53,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule
+=======
+    AppRoutingModule,
+    NgbModule,
+>>>>>>> 06115183019ac2f6071c1ea1161d312261998f42
   ],
   providers: [],
   bootstrap: [AppComponent]

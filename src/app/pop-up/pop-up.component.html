@@ -1,3 +1,49 @@
-<p>
-  pop-up works!
-</p>
+<div id="popup" class="modal" >
+  <ng-template  #content let-modal>
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Weather Consult</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="state">Enter the name of the state</label>
+          <div class="input-group">
+            <input id="state" class="form-control" placeholder="state" name="stt">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close()" [routerLink]="['/dashboard']">Show details</button>
+    </div>
+
+  </ng-template>
+</div>
+<!--button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#login-modal"></button-->
+
+<button id="openModal" #openModal [hidden]="true" (click)="open(content)"></button>
+
+
+
+<!-- Modal -->
+<!--div class="modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h1>Login to Your Account</h1><br>
+      <form>
+        <input type="text" name="user" placeholder="Username">
+        <input type="password" name="pass" placeholder="Password">
+        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+      </form>
+
+      <div class="login-help">
+        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+      </div>
+    </div>
+  </div>
+</div-->
+<!--button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#login-modal"></button-->
