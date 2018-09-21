@@ -55,8 +55,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MatSelectModule
 =======
     AppRoutingModule,
+<<<<<<< HEAD
     NgbModule,
 >>>>>>> 06115183019ac2f6071c1ea1161d312261998f42
+=======
+<<<<<<< HEAD
+    NgbModule,
+=======
+    HttpModule,
+    FormsModule
+
+>>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
+>>>>>>> 95fdaaa24317e1e2a7e081d8a82281323f76351b
   ],
   providers: [],
   bootstrap: [AppComponent]
