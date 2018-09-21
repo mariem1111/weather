@@ -1,3 +1,43 @@
-<p>
-  register works!
-</p>
+<mat-card class="example-card">
+  <mat-card-content>
+    <!-- Material form register -->
+    <form [formGroup]="cardForm">
+      <p class="h4 text-center py-4">Sign up</p>
+
+      <!-- Material input text -->
+      <div class="md-form">
+        <mat-icon icon="user" class="prefix grey-text"></mat-icon>
+        <input type="text" id="materialFormCardNameEx" formControlName="materialFormCardNameEx" class="form-control" mdbInputDirective>
+        <label for="materialFormCardNameEx" class="font-weight-light">Your name</label>
+      </div>
+      <!-- Material input email -->
+      <div class="md-form">
+        <mat-icon icon="envelope" class="prefix grey-text"></mat-icon>
+        <input type="email" id="materialFormCardEmailEx" formControlName="materialFormCardEmailEx" class="form-control" mdbInputDirective>
+        <label for="materialFormCardEmailEx" class="font-weight-light">Your email</label>
+      </div>
+
+
+      <!-- Material input email -->
+      <div class="md-form">
+        <mat-icon icon="exclamation-triangle" class="prefix grey-text"></mat-icon>
+        <input type="email" id="materialFormCardConfirmEx" formControlName="materialFormCardConfirmEx" class="form-control" mdbInputDirective>
+        <label for="materialFormCardConfirmEx" class="font-weight-light">Confirm your email</label>
+      </div>
+
+      <!-- Material input password -->
+      <div class="md-form">
+        <mat-icon icon="lock" class="prefix grey-text"></mat-icon>
+        <input type="password" id="materialFormCardPasswordEx" formControlName="materialFormCardPasswordEx" class="form-control"
+          mdbInputDirective>
+        <label for="materialFormCardPasswordEx" class="font-weight-light">Your password</label>
+      </div>
+
+
+      <div class="text-center py-4 mt-3">
+        <button mdbBtn color="cyan" class="waves-light" type="submit" mdbWavesEffect>Register</button>
+      </div>
+    </form>
+    <!-- Material form register -->
+  </mat-card-content>
+</mat-card>
