@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 
-
+import {ErrorStateMatcher} from '@angular/material/core';
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 
 @Component({
@@ -9,21 +15,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
-  cardForm: FormGroup;
-
-  constructor(private fb: FormBuilder) {
-    this.cardForm = fb.group({
-      materialFormCardNameEx: ['', Validators.required],
-      materialFormCardEmailEx: ['', [Validators.email, Validators.required]],
-      materialFormCardConfirmEx: ['', Validators.required],
-      materialFormCardPasswordEx: ['', Validators.required]
-    });
 
 
+export class RegisterComponent {
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+  favoriteSeason: string;
+  seasons: string[] = ['male', 'Femele'];
+  matcher = new MyErrorStateMatcher();
    }
-
-  ngOnInit() {
-  }
-
-}
