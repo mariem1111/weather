@@ -11,9 +11,6 @@ import {ApiWeatherService} from './api-weather.service';
 import { HttpModule } from '@angular/http';
 import {FormsModule} from '@angular/forms';
 
-
-
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -27,13 +24,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     NgbModule,
-=======
+
     HttpModule,
     FormsModule
 
->>>>>>> b085c3df9617578b4fff5138ec20f7e0e4bc8a1d
   ],
   providers: [ApiWeatherService],
   bootstrap: [AppComponent]
