@@ -16,12 +16,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     RegisterComponent,
     PopUpComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
