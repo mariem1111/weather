@@ -1,10 +1,63 @@
-<h1> City name: {{weather.name}} </h1>
-<h2> City temp: {{weather.main.temp}} </h2>
-<h2> City wind: {{weather.wind.speed}} </h2>
-<h2>  {{weather.weather[0].icon}} </h2>
-<img src='http://openweathermap.org/img/w/ + weather.weather[0].icon + ".png'>
+
+        <div class="wrapper">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="card-box">
+                          <div class="row">
+                              <div class="col-sm-7">
+                                  <div class="row">
+                                      <div class="col-6 text-center">
+                                          <canvas id="partly-cloudy-day" width="100" height="100"></canvas>
+                                      </div>
+                                      <div class="col-6">
+                                          <h2 class="m-t-0 text-muted"><b>{{weather.name}}</b></h2>
+                                          <h2 class="m-t-0 text-muted"><b>{{weather.main.temp}}</b></h2>
+                                          <p class="text-muted">Max : {{weather.main.temp_min}}</p>
+                                          <p class="text-muted">Min : {{weather.main.temp_max}}</p>
+
+                                      </div>
+                                  </div><!-- End row -->
+                              </div>
+                              <div class="col-4">
+                              <div class="widget-simple-chart text-right card-box">
+                                  <div class="circliful-chart" data-dimension="90" data-text="35%" data-width="5" data-fontsize="14" data-percent="35" data-fgcolor="#5fbeaa" data-bgcolor="#505A66"></div>
+                                  <h3 class="text-success counter m-t-10">{{weather.visibility}}</h3>
+                                  <p class="text-muted text-nowrap m-b-10">Humidity</p>
+                              </div>
+                              </div>
+                          </div><!-- end row -->
+                      </div>
+                  </div> <!-- end col -->
+
+                   <div class="col-lg-6">
+                      <iframe src="http://www.windfinder.com"> </iframe>
+                  </div> <!-- end col -->
+              </div>
+           <div class="row">
+                  <div class="col-sm-6 col-lg-6">
+                      <div class="widget-simple-chart text-right card-box">
+                          <div class="circliful-chart" data-dimension="90" data-text="40%" data-width="5" data-fontsize="14" data-percent="" data-fgcolor="#5fbeaa" data-bgcolor="#505A66"></div>
+                          <h3 class="text-success counter m-t-10">{{weather.visibility}}</h3>
+                          <p class="text-muted text-nowrap m-b-10">Visibility</p>
+                      </div>
+                  </div>
 
 
 
+                  <div class="col-sm-6 col-lg-6">
+                      <div class="widget-simple-chart text-right card-box">
+                          <div class="circliful-chart" data-dimension="90" data-text="35%" data-width="5" data-fontsize="14" data-percent="35" data-fgcolor="#5fbeaa" data-bgcolor="#505A66"></div>
+                          <h3 class="text-success counter m-t-10">{{weather.clouds.all}}+"+"</h3>
+                          <p class="text-muted text-nowrap m-b-10">Clouds</p>
+                      </div>
+                  </div>
+
+
+              </div>
+
+          </div> <!-- end container -->
+      </div>
+      <!-- end wrapper -->
 
 
