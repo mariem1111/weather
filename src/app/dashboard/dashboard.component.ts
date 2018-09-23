@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiWeatherService } from '../Api-weather.service';
+import { ApiServiceService } from '../api-service.service';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   };
   weather: any;
   value;
-  constructor(private apiweatherService: ApiWeatherService) { }
+  constructor(private apiweatherService: ApiServiceService) { }
 
   ngOnInit() {
     this.value = localStorage.getItem('location');

@@ -1,3 +1,4 @@
+
 <div id="popup" class="modal" >
   <ng-template  #content let-modal>
 
@@ -12,13 +13,15 @@
         <div class="form-group">
           <label for="state">Enter the name of the state</label>
           <div class="input-group">
-            <input id="state" class="form-control" placeholder="state" name="stt">
+
+            <input type="text" id="city" class="form-control" placeholder="city" name="city" [(ngModel)]="city">
+            <input type="text" id="code" class="form-control" placeholder="code" name="code" [(ngModel)]="code">
           </div>
         </div>
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close()" [routerLink]="['/dashboard']">Show details</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close()" (click)="saveForm()">Show details</button>
     </div>
 
   </ng-template>
