@@ -1,5 +1,6 @@
 
 import { Component, OnInit, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
@@ -24,7 +25,7 @@ export class PopUpComponent implements OnInit, AfterViewInit {
 
   title = 'app works!';
 
-  constructor(private modalService: NgbModal, private router: Router) { }
+  constructor(private cookieService: CookieService, private modalService: NgbModal, private router: Router) { }
   ngAfterViewInit() {
     setTimeout(() => this.ngOnInit());
   }
@@ -32,6 +33,11 @@ export class PopUpComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.openModal.nativeElement.click();
+    const test: string = this.cookieService.get('Test');
+    if (test === 'non') {
+      this.router.navigate(['login']);
+
+    }
   }
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
