@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 
 
 @Component({
@@ -9,22 +11,33 @@ import { ApiServiceService } from '../api-service.service';
 })
 export class DashboardComponent implements OnInit {
 
+  @Input()
+  url: string = "https://www.hghghhghghghgh.com";
+  urlSafe: SafeResourceUrl;
+
+
   location = {
     city: 'france',
     code: 'fr'
   };
   weather: any;
   value;
-  constructor(private apiweatherService: ApiServiceService) { }
+  Math: any;
+
+  myTemplate: any = '';
+  constructor(private apiweatherService: ApiServiceService, public sanitizer: DomSanitizer) {
+    this.Math = Math;
+  }
 
   ngOnInit() {
+    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
     this.value = localStorage.getItem('location');
 
     if (this.value != null) {
         this.location = JSON.parse(this.value);
+
+
   }
-
-
     this.apiweatherService.getWeather(this.location.city, this.location.code).subscribe(
       response => {
         console.log(response);

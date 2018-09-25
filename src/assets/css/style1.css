@@ -1,0 +1,26 @@
+.container-fluid {
+  max-width: 100%;
+}
+.dataTables_wrapper .col-xs-6 {
+  width: 100%;
+  text-align: left;
+}
+
+.widget-simple-chart .circliful-chart {
+  float: left;
+  margin-top: -5px;
+}
+
+.text-success {
+  color: #00b19d !important;
+}
+.text-muted {
+  color: #98a6ad !important;
+}
+/* Circliful charts */
+.circliful-chart {
+  margin: 0 auto;
+}
+.mrg{
+  margin-top:5%;
+}

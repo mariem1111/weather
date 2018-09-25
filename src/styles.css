@@ -1,12 +1,2 @@
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
-body{
-background: url('assets/images/1.jpg') no-repeat;
-
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
