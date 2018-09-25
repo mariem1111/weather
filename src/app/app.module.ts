@@ -25,6 +25,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatTableModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+
   ],
   exports: [
     CommonModule,
@@ -71,9 +74,10 @@ import {MatSelectModule} from '@angular/material/select';
      MatTableModule,
      MatMenuModule,
      MatIconModule,
-     MatProgressSpinnerModule
+     MatProgressSpinnerModule,
+
      ],
-  providers: [],
+  providers: [CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

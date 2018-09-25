@@ -1,8 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
+
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-
-
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,28 +12,29 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class DashboardComponent implements OnInit {
 
-  @Input()
-  url: string = "https://www.hghghhghghghgh.com";
-  urlSafe: SafeResourceUrl;
-
-
   location = {
     city: 'france',
     code: 'fr'
   };
   weather: any;
   value;
+
   Math: any;
 
   myTemplate: any = '';
-  constructor(private apiweatherService: ApiServiceService, public sanitizer: DomSanitizer) {
+  constructor(private router: Router, private apiweatherService: ApiServiceService, private cookieService: CookieService) {
     this.Math = Math;
   }
 
-  ngOnInit() {
-    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    this.value = localStorage.getItem('location');
 
+
+  ngOnInit() {
+    this.value = localStorage.getItem('location');
+    const test: string = this.cookieService.get('Test');
+    if (test === 'non') {
+      this.router.navigate(['login']);
+    }
+    console.log(test);
     if (this.value != null) {
         this.location = JSON.parse(this.value);
 
