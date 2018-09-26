@@ -30,6 +30,7 @@
     "core-js": "^2.5.4",
     "install": "^0.12.1",
     "jquery": "^3.3.1",
+    "ng-circle-progress": "^1.2.0",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.3.2",

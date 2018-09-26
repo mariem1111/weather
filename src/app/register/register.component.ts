@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 
-import {ErrorStateMatcher} from '@angular/material/core';
+import { ErrorStateMatcher } from '@angular/material/core';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -22,7 +22,9 @@ export class RegisterComponent {
     Validators.required,
     Validators.email,
   ]);
+  username: string;
+  password: string;
   favoriteSeason: string;
   seasons: string[] = ['male', 'Femele'];
   matcher = new MyErrorStateMatcher();
-   }
+}

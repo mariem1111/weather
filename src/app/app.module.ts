@@ -17,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 import { HttpModule } from '@angular/http';
@@ -62,6 +63,16 @@ import { CookieService } from 'ngx-cookie-service';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
+
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: '#78C000',
+      innerStrokeColor: '#C7E596',
+      animationDuration: 300,
+    })
 
   ],
   exports: [

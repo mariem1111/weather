@@ -9,7 +9,8 @@
                 <div class="col-6 text-center">
                   <h2 class="m-t-0 text-muted">
                     <b>
-                      <img src='http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png' width="50%" height="100%"> </b>
+                      <img src='http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png' width="50%" height="100%">
+                    </b>
                   </h2>
                 </div>
                 <div class="col-6">
@@ -32,8 +33,9 @@
             </div>
             <div class="col-4">
               <div class="widget-simple-chart text-right card-box">
-                <div class="circliful-chart" data-dimension="90" data-text="50%" data-width="5" data-fontsize="14" data-percent="50" data-fgcolor="#5fbeaa"
-                  data-bgcolor="#505A66"></div>
+                <circle-progress [percent]="weather.main.humidity" [title]="weather.main.humidity" [radius]="50"
+                  [outerStrokeWidth]="8" [innerStrokeWidth]="5" [showSubtitle]="false" [outerStrokeColor]="'#314d8e'"
+                  [innerStrokeColor]="'#b1bbc9'" [animation]="true" [animationDuration]="300"></circle-progress>
                 <h3 class="text-success counter m-t-10">{{weather.main.humidity}}</h3>
                 <p class="text-muted text-nowrap m-b-10">Humidity</p>
               </div>
@@ -45,48 +47,49 @@
       <!-- end col -->
 
       <div class="col-6">
-      
-
+          <iframe name="Framename" src="https://eu0.proxysite.com/process.php?d=60r%2F4eY%2B%2BDfjJfTux6dk3r1LfnVkQNg6jQnezr54qSaiwi%2FWdvXa29NW%2FcT4ofl1gkMPHxuILn1HIGDKZZMsml0FSe6Ogy3wh0MzNkAUxRkbp2VcZB7sUU42&b=1#3/49.5042/9.5421"
+          width="550" height="700" frameborder="0" scrolling="auto"> </iframe>
       </div>
     </div>
-
-
-
 
     <div class="container mrg">
 
-    <div class="row ">
+      <div class="row ">
 
-      <div class="col-6">
-        <div class="row">
-          <div class="col-7">
-            <div class="widget-simple-chart text-right card-box">
-                <div class="circliful-chart" data-dimension="90" data-text="35%" data-width="5" data-fontsize="14" data-percent="35" data-fgcolor="#5fbeaa"
-                data-bgcolor="#505A66"></div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-7">
+              <div class="widget-simple-chart text-right card-box">
+                <circle-progress [percent]="weather.visibility/16000*100" [title]="weather.visibility/16000*100"
+                  [radius]="50" [outerStrokeWidth]="8" [innerStrokeWidth]="5" [showSubtitle]="false" [outerStrokeColor]="'#314d8e'"
+                  [innerStrokeColor]="'#b1bbc9'" [animation]="true" [animationDuration]="300"></circle-progress>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <h3 class="text-success counter m-t-10">{{weather.visibility}}</h3>
+              <p class="text-muted text-nowrap m-b-10">Visibility</p>
             </div>
           </div>
-          <div class="col-4">
-            <h3 class="text-success counter m-t-10">{{weather.visibility}}</h3>
-            <p class="text-muted text-nowrap m-b-10">Visibility</p>
-          </div>
         </div>
-      </div>
 
-    <div class="col-6">
-      <div class="row">
-        <div class="col-7">
-          <div class="widget-simple-chart text-right card-box">
-            <div class="circliful-chart" data-dimension="90" data-text="35%" data-width="5" data-fontsize="14" data-percent="35" data-fgcolor="#5fbeaa"
-                data-bgcolor="#505A66"></div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-7">
+              <div class="widget-simple-chart text-right card-box">
+                <circle-progress [percent]="weather.clouds.all" [title]="weather.clouds.all" [radius]="50"
+                  [outerStrokeWidth]="8" [innerStrokeWidth]="5" [showSubtitle]="false" [outerStrokeColor]="'#314d8e'"
+                  [innerStrokeColor]="'#b1bbc9'" [animation]="true" [animationDuration]="300"></circle-progress>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <h3 class="text-success counter m-t-10">{{weather.clouds.all}}</h3>
+              <p class="text-muted text-nowrap m-b-10">Clouds</p>
+            </div>
           </div>
         </div>
-        <div class="col-4">
-          <h3 class="text-success counter m-t-10">{{weather.visibility}}</h3>
-          <p class="text-muted text-nowrap m-b-10">Visibility</p>
-        </div>
       </div>
-    </div>
-</div>
 
 
     </div>
