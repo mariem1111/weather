@@ -1,6 +1,6 @@
 
     <nav class="navbar navbar-dark bg-dark justify-content-md-center">
-    <a mat-button [routerLink]="['/login']">Disconnect</a>
+    <a mat-button  (click)="dec()">Disconnect</a>
     <a mat-button [routerLink]="['/popUp']">Research</a>
    </nav>
 
@@ -112,8 +112,12 @@
 
     <!--frame-->
     <div class="col-6">
-      <iframe name="Framename" src="https://eu0.proxysite.com/process.php?d=vg7YI6c1jEedTCeXQQuye7ODRSLwr5k%3D&b=1&f=norefer#3/49.5042/9.5421"
-        width="550" height="100%" frameborder="0" scrolling="auto"> </iframe>
+
+
+      <iframe name="Framename"
+       [src]="videoUrl"
+
+      width="550" height="100%" frameborder="0" scrolling="auto"> </iframe>
     </div>
 
 

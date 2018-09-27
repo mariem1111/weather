@@ -20,13 +20,20 @@ export class DashboardComponent implements OnInit {
   value;
 
   Math: any;
-
+  dangerousVideoUrl;
+  videoUrl;
   myTemplate: any = '';
-  constructor(private router: Router, private apiweatherService: ApiServiceService, private cookieService: CookieService) {
+  constructor(private router: Router, private apiweatherService: ApiServiceService,
+   private cookieService: CookieService, private sanitizer: DomSanitizer) {
     this.Math = Math;
+
   }
 
+  dec(): void {
+    this.cookieService.delete('Test');
+    this.router.navigate(['login']);
 
+  }
 
   ngOnInit() {
     this.value = localStorage.getItem('location');
@@ -44,6 +51,11 @@ export class DashboardComponent implements OnInit {
       response => {
         console.log(response);
         this.weather = response;
+        this.dangerousVideoUrl = 'https://cors.io/?https://www.windfinder.com/#7/' + this.weather.coord.lat + '/' + this.weather.coord.lon;
+    this.videoUrl =
+        this.sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
+
+
       }
     );
   }

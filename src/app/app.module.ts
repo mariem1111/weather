@@ -36,6 +36,7 @@ import { CookieService } from 'ngx-cookie-service';
     RegisterComponent,
     PopUpComponent,
     DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
