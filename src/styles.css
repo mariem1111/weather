@@ -1,2 +1,8 @@
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body
+{
+  background-image: url('assets/images/fanart.jpg');
+  background-position: center;
+  background-size: cover;
+}

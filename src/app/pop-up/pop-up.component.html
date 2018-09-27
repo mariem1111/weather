@@ -1,36 +1,39 @@
 
-<div id="popup" class="modal" >
-  <ng-template  #content let-modal>
+    <ng-template #content let-modal>
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+      <div class="modal-header">
+        <h4 class="modal-title login100-form-title p-b-37" id="modal-basic-title">Weather Consult</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Weather Consult</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="form-group">
-          <label for="city">Enter the name of the city</label>
-          <div class="input-group">
-            <input type="text" id="city" class="form-control" placeholder="city" name="city" [(ngModel)]="city">
+      <div class="modal-body">
+        <form class="login100-form validate-form">
+          <div class="form-group">
+            <label for="city">Enter the name of the city</label>
+            <div class="input-group">
+              <input type="text" id="city" class="form-control" placeholder="city" name="city" [(ngModel)]="city">
+            </div>
+
           </div>
-          <label for="city">Enter the code</label>
-          <div class="input-group">
-            <input type="text" id="code" class="form-control" placeholder="code" name="code" [(ngModel)]="code">
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close()" (click)="saveForm()">Save</button>
-    </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close()" (click)="saveForm()">Save</button>
+      </div>
 
-  </ng-template>
-</div>
-<!--button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#login-modal"></button-->
+    </div>
+  </div>
+    </ng-template>
 
-<button id="openModal" #openModal [hidden]="true" (click)="open(content)"></button>
+  <!--button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#login-modal"></button-->
+
+  <button id="openModal" #openModal [hidden]="true" (click)="open(content)"></button>
+
+
+
 
 
 
