@@ -1,22 +1,20 @@
-
-    <nav class="navbar navbar-dark bg-dark justify-content-md-center">
-    <a mat-button  (click)="dec()">Disconnect</a>
-    <a mat-button [routerLink]="['/popUp']">Research</a>
-   </nav>
-
+<nav class="navbar navbar-dark bg-dark justify-content-md-center">
+  <a mat-button (click)="dec()">Disconnect</a>
+  <a mat-button [routerLink]="['/popUp']">Research</a>
+</nav>
 
 
 <div class="container">
 
   <div class="info_container row">
 
-    <div class="col-6">
+    <div class="col-lg-6">
       <div>
 
         <div class="info row">
 
-          <div class="col-6">
-            <div class="info2 row">
+          <div class="col-sm-6">
+            <div class="cardinfo info2 row">
 
               <div class="col-4 text-center">
                 <img src='http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png' width="50%" height="100%">
@@ -38,10 +36,10 @@
             </div>
             <!-- End row -->
           </div>
-          <div class="col-6">
-            <div class="row">
+          <div class="col-sm-6 ">
+            <div class="cardinfo row">
               <mat-card>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="widget-simple-chart text-right card-box">
                     <circle-progress [percent]="weather.main.humidity" [title]="weather.main.humidity" [radius]="50"
                       [unitsFontSize]="15" [titleColor]="'#fff'" [unitsColor]="'#fff'" [outerStrokeWidth]="8"
@@ -49,7 +47,7 @@
                       [animation]="true" [animationDuration]="300"></circle-progress>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <h3>{{weather.main.humidity}}</h3>
                   <p>Humidity</p>
                 </div>
@@ -61,10 +59,10 @@
 
         <div class="info row">
 
-          <div class="col-6">
-            <div class="row">
+          <div class="col-sm-6">
+            <div class="cardinfo row">
               <mat-card>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="widget-simple-chart text-right card-box">
                     <circle-progress [percent]="weather.visibility/16000*100" [title]="weather.visibility/16000*100"
                       [unitsFontSize]="15" [titleColor]="'#fff'" [unitsColor]="'#fff'" [radius]="50"
@@ -72,7 +70,7 @@
                       [animation]="true" [animationDuration]="300"></circle-progress>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <h3>{{weather.visibility}}</h3>
                   <p>Visibility</p>
                 </div>
@@ -80,12 +78,12 @@
             </div>
           </div>
 
-          <div class="col-6">
-            <div class="row">
+          <div class="col-sm-6">
+            <div class="cardinfo row">
               <mat-card>
 
 
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="widget-simple-chart text-right card-box">
                     <circle-progress [percent]="weather.clouds.all" [title]="weather.clouds.all" [titleColor]="'#fff'"
                       [unitsFontSize]="15" [unitsColor]="'#fff'" [radius]="50" [outerStrokeWidth]="8"
@@ -94,7 +92,7 @@
 
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <h3>{{weather.clouds.all}}</h3>
                   <p>Clouds</p>
                 </div>
@@ -110,17 +108,15 @@
     </div>
     <!-- end col -->
 
+
+
+
+
     <!--frame-->
-    <div class="col-6">
+    <div class="col-lg-6 embed-responsive embed-responsive-16by9">
+      <iframe name="Framename" [src]="videoUrl" width="550" height="100%" frameborder="0" scrolling="auto"> </iframe>
 
-
-      <iframe name="Framename"
-       [src]="videoUrl"
-
-      width="550" height="100%" frameborder="0" scrolling="auto"> </iframe>
     </div>
-
-
 
 
   </div>
