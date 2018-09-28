@@ -1,0 +1,16 @@
+a{
+  color: rgb(179, 177, 177);
+}
+
+a:hover
+{
+color: blanchedalmond !important;
+}
+
+::placeholder {
+  color:white !important;
+}
+
+.mat-input-element {
+  caret-color: #e2e3e9 !important;
+}

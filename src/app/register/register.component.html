@@ -15,7 +15,7 @@
       <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter email">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-          <mat-hint>Errors appear instantly!</mat-hint>
+          
           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -30,7 +30,7 @@
             </mat-form-field>
             <span class="focus-input100"></span>
       </div>
-      <mat-checkbox>Check me!</mat-checkbox>
+
 
       <div class="container-login100-form-btn">
         <button [routerLink]="['/login']" class="login100-form-btn" >
@@ -39,7 +39,7 @@
       </div>
 
       <div class="text-center">
-        <a href="#" class="txt2 hov1">
+        <a [routerLink]="['/login']" class="txt2 hov1">
           Sign Up
         </a>
       </div>

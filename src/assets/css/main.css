@@ -1,7 +1,4 @@
 
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -134,7 +131,7 @@ iframe {
   font-family: SourceSansPro-Regular;
   font-size: 16px;
   line-height: 1.4;
-  color: #a3990ace;
+  color: #000;
 }
 
 
@@ -198,7 +195,7 @@ iframe {
   display: block;
   font-family: SourceSansPro-Bold;
   font-size: 30px;
-  color: #a78e02;
+  color: rgb(179, 177, 177);
   line-height: 1.2;
   text-align: center;
 }
@@ -210,7 +207,7 @@ iframe {
   width: 100%;
 
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
 
@@ -285,12 +282,12 @@ iframe {
   padding: 0 20px;
   min-width: 160px;
   height: 50px;
-  background-color: #1b1a17;
+  background-color: rgb(179, 177, 177);
   border-radius: 25px;
 
   font-family: SourceSansPro-SemiBold;
   font-size: 14px;
-  color: #a78e02;
+  color: #272724;
 
   line-height: 1.2;
   text-transform: uppercase;
